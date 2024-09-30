@@ -1,0 +1,5 @@
+pip-tools
+pytest
+jupyter
+pre-commit
+nb-clean
