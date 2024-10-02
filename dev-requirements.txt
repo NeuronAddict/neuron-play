@@ -4,6 +4,9 @@
 #
 #    pip-compile dev-requirements.in
 #
+--index-url http://pi.ldmz:8080/root/pypi/+simple
+--trusted-host pi.ldmz
+
 anyio==4.6.0
     # via
     #   httpx
@@ -44,9 +47,7 @@ charset-normalizer==3.3.2
 click==8.1.7
     # via pip-tools
 comm==0.2.2
-    # via
-    #   ipykernel
-    #   ipywidgets
+    # via ipykernel
 debugpy==1.8.6
     # via ipykernel
 decorator==5.1.1
@@ -85,17 +86,9 @@ idna==3.10
 iniconfig==2.0.0
     # via pytest
 ipykernel==6.29.5
-    # via
-    #   jupyter
-    #   jupyter-console
-    #   jupyterlab
+    # via jupyterlab
 ipython==8.27.0
-    # via
-    #   ipykernel
-    #   ipywidgets
-    #   jupyter-console
-ipywidgets==8.1.5
-    # via jupyter
+    # via ipykernel
 isoduration==20.11.0
     # via jsonschema
 jedi==0.19.1
@@ -117,21 +110,15 @@ jsonschema[format-nongpl]==4.23.0
     #   nbformat
 jsonschema-specifications==2023.12.1
     # via jsonschema
-jupyter==1.1.1
-    # via -r dev-requirements.in
 jupyter-client==8.6.3
     # via
     #   ipykernel
-    #   jupyter-console
     #   jupyter-server
     #   nbclient
-jupyter-console==6.6.3
-    # via jupyter
 jupyter-core==5.7.2
     # via
     #   ipykernel
     #   jupyter-client
-    #   jupyter-console
     #   jupyter-server
     #   jupyterlab
     #   nbclient
@@ -151,17 +138,13 @@ jupyter-server==2.14.2
 jupyter-server-terminals==0.5.3
     # via jupyter-server
 jupyterlab==4.2.5
-    # via
-    #   jupyter
-    #   notebook
+    # via notebook
 jupyterlab-pygments==0.3.0
     # via nbconvert
 jupyterlab-server==2.27.3
     # via
     #   jupyterlab
     #   notebook
-jupyterlab-widgets==3.0.13
-    # via ipywidgets
 markupsafe==2.1.5
     # via
     #   jinja2
@@ -177,9 +160,7 @@ nb-clean==3.3.0
 nbclient==0.10.0
     # via nbconvert
 nbconvert==7.16.4
-    # via
-    #   jupyter
-    #   jupyter-server
+    # via jupyter-server
 nbformat==5.10.4
     # via
     #   jupyter-server
@@ -191,7 +172,7 @@ nest-asyncio==1.6.0
 nodeenv==1.9.1
     # via pre-commit
 notebook==7.2.2
-    # via jupyter
+    # via -r dev-requirements.in
 notebook-shim==0.2.4
     # via
     #   jupyterlab
@@ -226,9 +207,7 @@ pre-commit==3.8.0
 prometheus-client==0.21.0
     # via jupyter-server
 prompt-toolkit==3.0.48
-    # via
-    #   ipython
-    #   jupyter-console
+    # via ipython
 psutil==6.0.0
     # via ipykernel
 ptyprocess==0.7.0
@@ -242,7 +221,6 @@ pycparser==2.22
 pygments==2.18.0
     # via
     #   ipython
-    #   jupyter-console
     #   nbconvert
 pyproject-hooks==1.2.0
     # via
@@ -264,7 +242,6 @@ pyzmq==26.2.0
     # via
     #   ipykernel
     #   jupyter-client
-    #   jupyter-console
     #   jupyter-server
 referencing==0.35.1
     # via
@@ -326,9 +303,7 @@ traitlets==5.14.3
     #   comm
     #   ipykernel
     #   ipython
-    #   ipywidgets
     #   jupyter-client
-    #   jupyter-console
     #   jupyter-core
     #   jupyter-events
     #   jupyter-server
@@ -362,8 +337,6 @@ websocket-client==1.8.0
     # via jupyter-server
 wheel==0.44.0
     # via pip-tools
-widgetsnbextension==4.0.13
-    # via ipywidgets
 
 # The following packages are considered to be unsafe in a requirements file:
 # pip
